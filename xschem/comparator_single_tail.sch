@@ -54,9 +54,7 @@ N -260 100 -260 130 {
 lab=dvss}
 N -110 100 -110 130 {
 lab=dvss}
-N -170 -290 -170 -260 {
-lab=ibias}
-N -540 -180 -440 -180 {
+N -500 -180 -440 -180 {
 lab=#net2}
 N -480 -120 -440 -120 {
 lab=#net2}
@@ -70,10 +68,14 @@ N 340 -440 400 -440 {
 lab=high}
 N 340 -220 400 -220 {
 lab=low}
-N -800 -180 -720 -180 {
+N -800 -180 -680 -180 {
 lab=clk}
-N -800 -160 -720 -160 {
+N -800 -160 -780 -160 {
 lab=ena}
+N -700 -160 -680 -160 {
+lab=#net3}
+N -170 -290 -120 -290 {
+lab=avss}
 C {devices/lab_pin.sym} 150 -30 0 1 {name=l104 sig_type=std_logic lab=FN}
 C {devices/lab_pin.sym} -150 -30 0 0 {name=l105 sig_type=std_logic lab=FP}
 C {devices/lab_pin.sym} -210 -290 0 0 {name=l106 sig_type=std_logic lab=phi1}
@@ -87,8 +89,8 @@ C {devices/lab_pin.sym} -60 -380 0 1 {name=l125 sig_type=std_logic lab=FN}
 C {devices/lab_pin.sym} -320 -350 0 0 {name=l15 sig_type=std_logic lab=vinp}
 C {devices/lab_pin.sym} -20 -350 0 1 {name=l121 sig_type=std_logic lab=vinm}
 C {devices/ipin.sym} -800 -180 0 0 {name=p1 lab=clk}
-C {devices/ipin.sym} -800 -340 0 0 {name=p4 lab=vinp}
-C {devices/ipin.sym} -800 -320 0 0 {name=p5 lab=vinm}
+C {devices/iopin.sym} -800 -340 2 0 {name=p4 lab=vinp}
+C {devices/iopin.sym} -800 -320 2 0 {name=p5 lab=vinm}
 C {devices/lab_pin.sym} -20 -410 2 0 {name=l1 sig_type=std_logic lab=phi1}
 C {devices/lab_pin.sym} -110 -120 3 1 {name=l5 sig_type=std_logic lab=dvdd}
 C {devices/iopin.sym} -800 -100 2 0 {name=p19 lab=dvdd}
@@ -305,6 +307,8 @@ C {sky130_stdcells/buf_1.sym} 440 -220 0 0 {name=x3 VGND=dvss VNB=dvss VPB=dvdd 
 C {devices/lab_pin.sym} 340 -440 0 0 {name=p11 sig_type=std_logic lab=high}
 C {devices/lab_pin.sym} 340 -220 0 0 {name=p12 sig_type=std_logic lab=low}
 C {devices/ipin.sym} -800 -160 0 0 {name=p6 lab=ena}
-C {sky130_stdcells/dlclkp_1.sym} -630 -170 0 0 {name=x4 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/dlclkp_1.sym} -590 -170 0 0 {name=x4 VGND=dvss VNB=dvss VPB=dvdd VPWR=dvdd prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/clkbuf_1.sym} -400 -180 0 0 {name=x1 VGND=dvss VNB=dvss VPB=dvdd VPWR=dvdd prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/clkinv_1.sym} -400 -120 0 0 {name=x5 VGND=dvss VNB=dvss VPB=dvdd VPWR=dvdd prefix=sky130_fd_sc_hd__ }
+C {devices/lab_pin.sym} -120 -290 0 1 {name=l16 sig_type=std_logic lab=avss}
+C {sky130_stdcells/inv_1.sym} -740 -160 0 0 {name=x6 VGND=dvss VNB=dvss VPB=dvdd VPWR=dvdd prefix=sky130_fd_sc_hd__ }
